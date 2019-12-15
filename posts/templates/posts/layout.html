@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>News</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{% static 'posts/images/sch_comp.png' %}">
+    <link rel="stylesheet" href="{% static 'posts/css/layout.css' %}">
+    <link rel="stylesheet" href="{% static 'users/images/apply.png' %}">
+</head>
+
+<body>
+    <center>
+        <header class="up-head">
+            <div id="head">
+                <img src="{% static 'users/images/on.png' %}" float="left" height=60px width=60px />THE RHOKAYE SCHOOLS
+            </div>
+
+            <div id="header" style="font-size:10px">
+
+                <div style="height:40px" class="linkscont"><br />
+                    <nav class="links" style="font-size:17px">
+                        <a href="home" class="link" id="hm">Home</a>
+                        <a href="par_acc.html" class="link" id="pa">Parent</a>
+                        <a href="teacher.html" class="link" id="st">Staff</a>
+                        <a href="#" class="link" id="va">Vacancy</a>
+                        <a href="#" class="link" id="ga">Gallery</a>
+                        <a href="posts" class="link" id="sc">News</a>
+                        <a href="student_acc.html" class="link" id="st">Student</a>
+                    </nav>
+                    <nav class="menu-bar">
+                        <button type="menu" onclick="open()" class="menu-but">Menu</button>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    
+    <div class="main">{% block content %}
+    {% endblock  %}</div>
+</body>
+
+</html>

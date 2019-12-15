@@ -1,0 +1,39 @@
+{% extends 'users/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<article class="jumbotron">
+    <div class='news-head'>
+        <h3>{{posts.title}}</h3>
+        <div class="by">Posted by {{posts.author}} At {{posts.created_at}}</div>
+        <hr>
+    </div>
+    <img src='{{ posts.image.url }}' alt="" class="img-responsive" /><hr>
+    <div>
+        <article class="news-body">{{posts.body}}</article><br>
+        
+        <a href="/posts/?page=1" class="btn btn-primary" role="button">&lArr; Back</a><hr>
+
+</article>
+<h4 class="head" style="">Discussions</h4>
+{% for comment in comments %}
+    {% if comment.post_comment_id == posts.id %}
+        <div class="card text-white bg-slategrey" style="display:block">
+          <img class="card-img-top" src="holder.js/100px180/" alt="">
+          <div class="card-body">
+            <h4 class="card-title" style="float:left">{{comment.user}}</h4>
+            <p class="card-text" style="color:brown; display:block">-{{comment.created}}</p>
+            <p class="card-text">{{comment.body}}</p>
+          </div>
+        </div>
+    {% endif %}
+{% endfor %}
+<form method="POST" action="">
+<div class="form-group">
+    <legend class="legend">Comment</legend>
+    {% csrf_token %}
+    {{ comment_form|crispy }}
+    <p>User</p>
+    <button class="btn btn-primary" type="submit">Comment</button>
+</div>
+</form>
+{% endblock %}

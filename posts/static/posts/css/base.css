@@ -1,0 +1,147 @@
+body {
+    text-decoration: none;
+    color: black;
+    background-color: lavender;
+    background-attachment: fixed;
+}
+
+.up-head {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    margin-left: 0px;
+    background-color: plum
+}
+
+.head-e {
+    margin-top: 25%
+}
+
+a.link {
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(240, 247, 228);
+    border-color: rgb(221, 226, 223);
+}
+
+a.link:hover {
+    color: rgb(32, 218, 79);
+}
+
+a.link:active {
+    background-color: blue;
+}
+
+div.linkscont {
+    word-spacing: 10px;
+    text-align: center;
+    background-color: #008080;
+}
+
+.left-container {
+    display: none;
+    margin-top: 8%;
+    height: 500px;
+    float: left;
+    width: 300px;
+    background-color: whitesmoke;
+}
+
+.news {
+    float: left;
+    margin-top: 23%;
+    margin-left: -20px;
+    float: right;
+    height: 700px;
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+.heading {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.breaking {
+    float: left;
+    font-weight: solid bold;
+}
+
+.head-break {
+    text-align: left;
+}
+
+.news-head {
+    background-color: whitesmoke;
+}
+
+@media only screen and (min-width:769px) {
+    body {
+        text-decoration: none;
+        color: black;
+        background-color: lavender;
+        background-attachment: fixed;
+    }
+    .up-head {
+        position: fixed;
+        background-color: red;
+        top: 0%;
+        width: 100%;
+        margin-left: 0px;
+        margin-right: -10px
+    }
+    .head-e {
+        margin-top: 0%
+    }
+    a.link {
+        font-weight: bold;
+        text-decoration: none;
+        color: rgb(240, 247, 228);
+        border-color: rgb(221, 226, 223);
+    }
+    a.link:hover {
+        color: rgb(32, 218, 79);
+    }
+    a.link:active {
+        background-color: blue;
+    }
+    div.linkscont {
+        word-spacing: 10px;
+        text-align: center;
+        background-color: #008080;
+    }
+    .left-container {
+        display: block;
+        margin-top: 8%;
+        height: 500px;
+        float: left;
+        width: 300px;
+        background-color: whitesmoke;
+    }
+    .main {
+        display: block;
+        margin-top: 8%;
+        float: right;
+        height: 700px;
+        width: 74%;
+        background-color: whitesmoke;
+    }
+    .heading {
+        font-weight: bolder;
+        font-size: 20px;
+    }
+    .breaking {
+        float: left;
+        font-weight: solid bold;
+    }
+    .head-break {
+        text-align: left;
+    }
+    .news-head {
+        background-color: whitesmoke;
+    }
+    .link-div {
+        font-size: 20px;
+        font-weight: bolder
+    }
+}

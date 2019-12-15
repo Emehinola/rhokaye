@@ -1,0 +1,41 @@
+    .content-section {
+        background-color: lightskyblue;
+        opacity: 0.7;
+        margin-top: -150px;
+        height: 800px;
+        width: 500px;
+    }
+    
+    .up-head {
+        position: relative;
+        width: 900px;
+    }
+    
+    .body {
+        background-color: blue;
+    }
+    
+    .left-div {
+        display: none;
+    }
+    
+    .main {
+        float: none;
+    }
+    
+    .head {
+        font-size: 35px;
+        margin-top: 5em;
+    }
+    
+    .register {
+        margin-top: 20px;
+        float: left;
+        text-align: left;
+        margin-left: 10px;
+    }
+    
+    input {
+        font-weight: bold;
+        width: 100%;
+    }

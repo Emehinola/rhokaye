@@ -1,0 +1,58 @@
+{% extends 'users/base.html' %}{% load static %}{{title}} {% block content %}
+
+<link rel="stylesheet" href="{% static 'posts/css/index.css' %}">
+
+<div class="all-news">
+    <div class="head">BREAKING NEWS</div>
+    <hr> {% for post in posts %}
+    <div class="jumbotron">
+        <article class="article">
+        <div class="news-head">
+            <h5>{{post.title}}</h5>
+        </div>
+        <img src='{{ post.image.url }}' alt="" class="img-responsive" />
+        {{post.body|truncatechars:300}}...
+            <hr><a class="read-more" href="/posts/details/{{post.id}}">Continue reading</a>
+            <div class="by">Posted by {{post.author}} At {{post.created_at}}</div> Comments {{num}}</article>
+    </div>
+    {% endfor %}
+    {% if items.has_other_pages %}
+      <nav aria-label="Page navigation">
+        <ul class="pagination">
+        {% if items.has_previous %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ items.previous_page_number }}"><span aria-hidden="true"><<</span></a>
+          </li>
+          {% else %}
+            <li class="page-item disabled">
+            <a class="page-link">
+              <span aria-hidden="true"><<</span>
+            </a>
+          </li>
+          {% endif %}
+          {% for i in page_range %}
+            {% if items.number == i %}
+              <li class="page-item active"><a class="page-link" href="#">{{i}}<span class="sr-only">(current)</span></a></li>
+              {% else %}
+                <li class="page-item"><a class="page-link" href="?page={{i}}">{{i}}</a></li>
+            {% endif %}
+          {% endfor %}
+          {% if items.has_next %}
+            <li class="page-item"><a class="page-link" href="#"></a></li>
+          <li class="page-item">
+            <a class="page-link" href="?page={{ items.next_page_number }}" aria-label="Next">
+              <span class="sr-only">>></span>
+            </a>
+          </li>
+          {% else %}
+            <li class="page-item disabled">
+            <a class="page-link">
+              <span aria-hidden="true">>></span>
+            </a>
+          </li>
+          {% endif %}
+          
+        </ul>
+      </nav>
+      {% endif %}
+    {% endblock %}

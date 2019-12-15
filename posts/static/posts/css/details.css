@@ -1,0 +1,67 @@
+.jumbotron {
+    margin-top: 0%;
+    text-align: left;
+}
+
+.main {
+    margin-top: 10px;
+}
+
+.news-head {
+    font-size: 20px;
+    text-align: left;
+    color: blue;
+}
+
+.news-body {
+    font-size: 18px;
+    text-align: left;
+    color: black;
+}
+
+.by {
+    color: darkslategrey;
+}
+
+#sc:visited {
+    font-weight: bolder;
+    color: palevioletred;
+}
+
+.img-responsive {
+    width: 100%;
+}
+
+.back {
+    float: left;
+    margin-top: 10px;
+    font-size: 20px;
+    background-color: blue;
+    font-weight: bolder;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.card-title {
+    color: rgb(13, 235, 168);
+}
+
+.card {
+    width: 100%;
+    background-color: slategrey;
+}
+
+.img-responsive {
+    height: 280px;
+}
+
+form {
+    width: 40%;
+}
+
+textarea {
+    height: 20px;
+}

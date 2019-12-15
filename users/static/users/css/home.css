@@ -1,0 +1,78 @@
+.body {
+    background-color: #990033;
+}
+
+.apply {
+    height: 400px;
+    width: 100%;
+    background-image: url("apply.png");
+}
+
+.why-apply {
+    margin: 15px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 30px
+}
+
+.why-reg {
+    margin: 15px;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 35px;
+    color: green
+}
+
+.count-left {
+    background-color: white;
+    width: 350px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.abt-head {
+    border-radius: 2px;
+    background-color: rgb(93, 185, 185);
+    margin: 5px;
+    width: 100%;
+}
+
+.card {
+    width: 500px;
+}
+
+.why {
+    font-weight: bolder;
+    margin-left: 130px;
+    background-color: #4880EB;
+    border-style: dotted;
+    width: 180px;
+    border-radius: 2px;
+    text-align: center;
+    margin-top: 30px
+}
+
+.home {
+    margin-top: 10%;
+}
+
+#sc:visited {
+    font-weight: bold;
+    color: white;
+}
+
+a#home:visited {
+    font-weight: bold;
+    color: palevioletred;
+}
+
+.card {
+    width: 100%;
+}
+
+li {
+    color: #990033;
+    font-weight: bold;
+    list-style-type: none;
+    font-size: 20px;
+}

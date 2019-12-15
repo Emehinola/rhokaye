@@ -1,0 +1,128 @@
+/*phone view*/
+
+body {
+    background-image: url("apply.png");
+    text-decoration: none;
+    color: black;
+    background-attachment: fixed;
+}
+
+.up-head {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    margin-left: 0px;
+    background-color: plum
+}
+
+.head-e {
+    margin-top: 25%
+}
+
+a.link {
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(240, 247, 228);
+    border-color: rgb(221, 226, 223);
+}
+
+a.link:hover {
+    color: rgb(32, 218, 79);
+}
+
+a#sc:visited {
+    font-weight: bold;
+    color: palevioletred;
+}
+
+a.link:active {
+    background-color: blue;
+}
+
+div.linkscont {
+    word-spacing: 10px;
+    text-align: center;
+    background-color: #008080;
+}
+
+.left-container {
+    display: none;
+    margin-top: 8%;
+    height: 500px;
+    float: left;
+    width: 300px;
+    background-color: whitesmoke;
+}
+
+.heading {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.links {
+    display: none;
+}
+
+.main {
+    display: block;
+    margin-top: 18%;
+    height: 700px;
+    width: 60%;
+    background-color: whitesmoke;
+    text-align: left;
+}
+
+@media only screen and (min-width:769px) {
+    body {
+        background-image: url("apply.png");
+        text-decoration: none;
+        color: black;
+        background-attachment: fixed;
+    }
+    .up-head {
+        position: fixed;
+        background-image: url("sch_comp.png");
+        top: 0%;
+        width: 100%;
+        margin-left: 0px;
+        margin-right: -10px
+    }
+    .head-e {
+        margin-top: 0%
+    }
+    a.link {
+        font-weight: bold;
+        text-decoration: none;
+        color: rgb(240, 247, 228);
+        border-color: rgb(221, 226, 223);
+    }
+    a.link:hover {
+        color: rgb(32, 218, 79);
+    }
+    a#sc:visited {
+        font-weight: bold;
+        color: palevioletred;
+    }
+    a.link:active {
+        background-color: blue;
+    }
+    div.linkscont {
+        word-spacing: 10px;
+        text-align: center;
+        background-color: #008080;
+    }
+    .main {
+        display: block;
+        margin-top: 8%;
+        height: 700px;
+        width: 60%;
+        background-color: whitesmoke;
+        text-align: left;
+    }
+    .news-head {
+        font-size: 20px;
+    }
+    .menu-bar {
+        display: none;
+    }
+}
