@@ -8,9 +8,7 @@ class UserForm(UserCreationForm):
     username = forms.CharField(max_length=15)
     password1 = forms.PasswordInput()
     password2 = forms.PasswordInput()
-    #first_name = forms.CharField(max_length=15)
-    #last_name = forms.CharField(max_length=15)
-    #email = forms.EmailField(required=False)
+
 
     class Meta:
 

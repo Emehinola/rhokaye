@@ -1,0 +1,40 @@
+{% extends 'vacancy/vacbase.html' %}{% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'profile/css/profile.css' %}">
+<div class="row" style="background-color:lavender">
+    <div class="col-lg-offset-4 col-lg-6 col-sm-12 col-md-12 col-xs-12">
+    <h6 class="display-4 text-center">Profile Page</h6>
+    <p class="lead"><div class="profile-pix"><img src="{{user.profile.image.url}}" alt="pix" class="img-responsive" /></div>
+    <hr>
+    <div class="sub-head">Student's Personal Biodata</div>
+    <div class="full-data"><br>
+        <div class="bio-data"><strong id="name">Candidte's Full Name</strong><span style="float:right">{{user.first_name}} {{user.last_name}}</span><hr></div>
+        <div class="bio-data"><strong id="birth">Date of Birth</strong><span style="float:right">{{user.date_of_birth}}</span><hr></div>
+        <div class="bio-data"><strong id="class">Gender</strong><span style="float:right">samuel</span><hr></div>
+        <div class="bio-data"><strong id="country">Nationality</strong><span style="float:right">{{user.profile.nationality}}</span><hr></div>
+        <div class="bio-data"><strong id="origin">Origin</strong><span style="float:right">{{user.profile.state}}</span><hr></div>
+        <div class="bio-data"><strong id="address">Residence address</strong><span style="float:right">{{user.profile.address}}</span><hr></div>
+        <div class="bio-data"><strong id="rel">Religion</strong><span style="float:right">{{user.profile.religion}}</span><hr></div>
+    </div>
+    <div class="sub-head">Accademy's Information</div>
+    <div class="full-data"><br>
+        <div class="bio-data"><strong id="class">Class</strong><span style="float:right">samuel</span><hr></div>
+        <div class="bio-data"><strong id="depart">Department</strong><span style="float:right">samuel</span><hr></div>
+        <div class="bio-data"><strong id="post">Post</strong><span style="float:right">samuel</span><hr></div>
+    </div>
+    <div class="sub-head">Parent's Information</div>
+    <div class="full-data"><br>
+        <div class="bio-data"><strong id="name"> Parent's Full Name</strong><span style="float:right">samuel</span><hr></div>
+        <div class="bio-data"><strong id="occupation">Occupation</strong><span style="float:right">samuel</span><hr></div>
+        <div class="bio-data"><strong id="name">Nationality</strong><span style="float:right">samuel</span><hr></div>
+        <div class="bio-data"><strong id="origin">Origin</strong><span style="float:right">samuel</span><hr></div>
+        <div class="bio-data"><strong id="address">Residence address</strong><span style="float:right">samuel</span><hr></div>
+        <div class="bio-data"><strong id="rel">Religion</strong><span style="float:right">samuel</span><hr></div>
+    </div></p>
+    <hr class="my-2">
+    <p>More info</p>
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="{% url 'logout' %}" role="button">Logout</a>
+    </p>
+</div>
+
+{% endblock %}

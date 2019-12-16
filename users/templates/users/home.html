@@ -1,66 +1,115 @@
- {% extends 'users/base.html' %}{% load static %} {% block content %}
-<link rel="stylesheet" href="{% static 'users/css/home.css' %}">
-<link rel="stylesheet" href="{% static 'users/images/sch_comp.png' %}">
+{% load static %}
+<!DOCTYPE html>
+<html>
 
-<div class="container-fluid">
-    <div class="jumbotron">
+<head>
+    <title>
+        Home
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'users/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'posts/css/details.css' %}">
+    <link rel="stylesheet" href="{% static 'users/images/head.png' %}">
+    <link rel="stylesheet" href="{% static 'users/images/bck.png' %}">
+    <link rel="stylesheet" href="{% static 'users/css/home.css' %}">
+    <script type="text/javascript" src="{% static 'users/scripts/bootstrap.min.js' %}"
+    <script src="https://kit.fontawesome.com/9d936a6ca5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'users/css/all.css' %}" >
+    </head>
+    <body>
+    <body  style="background-color:cornflowerblue">
+<div class="page-header mb-7" style="background-image: url('{% static 'users/images/bck.png' %}')">
+            <h1 class="head ml-5">RHOKAYE COLLEGE</h1>
+            <div class="d-sm-none d-md-block d-lg-block d-xs-none">
+            <nav class="nav justify-content d-xs-hidden">
+                <li class="nav-item">
+                              <a class="nav-link" href="{% url 'home' %}" id="home">Home<span class="sr-only"></span></a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="{% url 'index' %}" id="news">Updates<span class="sr-only"></span></a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="{% url 'vacancy' %}" id="vacancy">Vacancy</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="{% url 'profile' %}" id="staff">Staff</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="{% url 'profile' %}" id="Parent">Parent</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="{% url 'profile' %}" id="Student">Student</a>
+                          </li>
+            </nav>
+            
+        </div>
+        </div>
+    <div class="container-fluid">
       <h1 class="display-6 ali">Rhokaye Nursery and Primary Schools</h1><hr class="my-2">
-      <p class="lead"><img class="image" src="{% static 'users/images/sch_comp.png' %}" /></p>
+      <p class="lead"><img class="image" src="{% static 'users/images/sch_comp.png' %}" height="300px" width="100%%" /></p>
+        <div style="display:inline; color:black"><i style="color:red" class="fas fa-map-marker-alt fa-2x ml-4 mt-5"></i> 1, Rhokaye Quarters, iyana ilogbo, shibiri ekunpa, Ojo, Lagos state. Nigeria</div>
+        <br><br>
+      <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="color:yellow">
       <p>Enroll with us and lets feel the goodness and testimony together. Available with us</p>
-      <i class="fa fa-list-ul text-left" aria-hidden="true">
+      
         <ol>
           <li style="background-color:cornflowerblue; width:130px; border-radius:5px">Normal class<li/>
-          <ul><li style="color:grey; font-weight:100">In this class, we deal in normal classroom activities such as teaching.</li>
-          <li style="color:grey; font-weight:100">This is meant for your children and anyone who would like to enroll in normal schooling</li></ul>
+          <ul><li  style="color:white">In this class, we deal in normal classroom activities such as teaching.</li>
+          <li  style="color:white">This is meant for your children and anyone who would like to enroll in normal schooling</li></ul>
           Business and Enterpreneur class
-          <ul><li style="color:grey; font-weight:100">In this class, we deal in educating individual in different Business ideals.</li>
-          <li style="color:grey; font-weight:100">We also train people on investment</li></ul>
+          <ul><li  style="color:white"">In this class, we deal in educating individual in different Business ideals.</li>
+          <li  style="color:white"">We also train people on investment</li></ul>
           <li style="background-color:cornflowerblue; width:120px; border-radius:5px">Adult class<li/>
-          <ul><li style="color:grey; font-weight:100">In this class, we deal in giving adults who wish to further education in one two ways the best attention they need.</li>
-          <li style="color:grey; font-weight:100">We also expose them to business and investment oppurtunity</li></ul>
+          <ul><li  style="color:white">In this class, we deal in giving adults who wish to further education in one two ways the best attention they need.</li>
+          <li  style="color:white">We also expose them to business and investment oppurtunity</li></ul>
           Counselling class
           <ul>
-          <li style="color:grey; font-weight:100">Do you need Counsel about your carrer or Business. You are in the right place for that.</li></ul>
+          <li  style="color:white">Do you need Counsel about your carrer or Business. You are in the right place for that.</li></ul>
           <li style="background-color:cornflowerblue; width:120px; border-radius:5px">Coding class<li/>
-          <ul><li style="color:grey; font-weight:100">As we all know that we are the era of technology and information. The demand for programming knowledge has also increased.</li>
-          <li style="color:grey; font-weight:100">This is the best and right time for your children to start their career in it</li></ul>
+          <ul><li  style="color:white">As we all know that we are the era of technology and information. The demand for programming knowledge has also increased.</li>
+          <li  style="color:white">This is the best and right time for your children to start their career in it</li></ul>
           and many more ...
         </ol>
       </i>
       <p class="lead">
-        <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Enroll/Enquire</a>
+        <a class="btn btn-primary btn-lg" href="{% url 'home' %}" role="button">Enroll/Enquire</a>
       </p>
-    </div>
-    </div>
-
+      </div>
+    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
     <h2 id="abt"> About</h2>
 
         <div class="card" style="background-color:cadetblue; border-color:darkblue;">
-          <img class="card-img-top" src="{% static 'users/images/sch_comp.png' %}" alt="">
+          <img class="card-img-top" src="{% static 'users/images/rhokaye1.jpg' %}" alt="">
           <div class="card-body">
             <h4 class="card-title">RHOKAYE School</h4>
             <p class="card-text"><p>
                 We are known for our excellent performance. We don't entrap students through show offs, gimmicks or croockeries This is Rhokaye Nursery, Primary and Secondary schools. The Rhokaye school is always known for his intelligent performance in raising good,
                 enlightened and well educated students. The School has been experiencing greatness in every aspects of education and development. More attetion is given to the children in the school. Parents' opinion is always considered if good enough
                 to be approved.</p></p>
+                <p> You don't need to worry about payments and book purchases, we have structured a convenient mean of fees payment that won't burden you.</p>
+                </p></p>
           </div>
            <br>
-            
-        
-        <div class="card text-white bg-primary">
-          <img class="card-img-top" src="holder.js/100px180/" alt="">
-          <div class="card-body">
-            <h4 class="card-title"></h4>
-            <p class="card-text">
-            <p> You have successfully installed XAMPP on this system! Now you can start using Apache, MariaDB, PHP and other components. You can find more info in the FAQs section or check the HOW-TO Guides for getting started with PHP applications. XAMPP
-                is meant only for development purposes.
-                <p>It has certain configuration settings that make it easy to develop locally but that are insecure if you want to have your installation accessible to others. If you want have your XAMPP accessible from the internet, make sure you understand
-                    the implications and you checked the FAQs to learn how to protect your site. Alternatively you can use WAMP, MAMP or LAMP which are similar packages which are more suitable for production. Start the XAMPP Control Panel to check the
-                    server status.
+           </div>
+        </div>
+    <div class="row">        
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <div class="jumbotron">
+        <h1 class="display-6">Educational Quotes</h1>
+            <p> Education is what remains after one has forgotten everything he learned in school. Albert Einstein.</p>
+                <p>The beautiful thing about learning is nobody can take it away from you. B. B. King</p>
+                <p>The ideal school would teach health, wealth, and happiness. It‘d be free, self-paced, and available to all. It‘d show opposing ideas and students would self-verify truth. No grades, no tests, no diplomas – just learning. Actually, you’re already here. Careful who you follow. Naval Ravikant
                 </p>
-        </div></p>
+                <p>Every person with a smartphone and a pair of headphones has access to the kind of education that was once reserved for the sons of aristocracy. The Stoic Emperor
+                </p>
+                
+                
           </div>
-    </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
         <div class="jumbotron">
           <h1 class="display-6">Why Us</h1>
           <p class="lead">We are known for our great mark in the education sector <span class="glyphicon glyphicon-phone"></span> </p>
@@ -71,16 +120,71 @@
             <div class="abt-head">DEDICATED TEACHER</div>
             <div class="info">We are talented with willing to work staffs. Qualified and as well dedicated to giving your children the best posible</div>
             <div class="abt-head">MODERN TEACHING EQUIPMENT</div>
-            <div class="info">Is it in classroom such as projector for visual teaching, or well equiped computer room. All our equipment ranging from sporting to classroom are modern ones.</div></p>
+            <div class="info">Is it in classroom such as projector for visual teaching, or well equiped computer room. All our equipment ranging from sporting to classroom are modern ones.</div></p></p>
           
         </div>
-    </div>
-</div>
- <footer class="page-footer">
-      <div class="container-fluid text-center">
-        <div class="row">
-          rtttyy
         </div>
-      </div>
+        
+                <div class="jumbotron" style="background-color:lavender">
+                <h5 class="display-6" style="color:red; font-family:cursive">DIRECT FROM THE PRINCIPAL'S DESK</h5>
+                <hr class="my-2">
+                    <img id="paul" src="{% static 'users/images/principal.jpg' %}" alt="principal photo" />
+                    <h5 class="display-6">FROM THE PRINCIPAL'S DESK</h5>
+                    <p class="lead">Welcome to the RHOKAYE COLLEGE, the school for breeding geinus.
+                    In this school, we dont trade Students ignorant rather we unlock the inner importance.
+                    </p>
+                    <p class="lead"><h6>ASSURANCE</h6>
+                    We've got the key to Unlock the Child's Potentials, Every Child is a geinus.
+                    </p>
+                    <p class="lead"><h6>OUR GOALS</h6>
+                    Understanding the Child deficiencies and proffer solutions, via our professional, well trained and experienced staff
+                    </p>
+                    <hr class="my-2">
+                    <p>MR. OTITE - THE PRINCIPAL</p>
+                    <p class="lead">
+                        <a class="btn btn-primary btn-lg" href="{% url 'home' %}" role="button">Enquire</a>
+                    </p>
+                </div>
+       
+</div>
+<div class="container-fluid" style="background-color:black">
+    <footer class="page-footer">
+        <div class="row">
+            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 mt-5">
+                <h4>Access Links</h4>
+                <ul>
+                    <li><a style="color:white" href="{% url 'home' %}">Home Page</a></li>
+                    <li><a style="color:purple" href="{% url 'index' %}">News Updates</a></li>
+                    <li><a style="color:red" href="{% url 'profile' %}">Student</a></li>
+                    <li><a style="color:pink" href="{% url 'profile' %}">Parent</a></li>
+                    <li><a style="color:green" href="{% url 'profile' %}">Staff</a></li>
+                    {% if user.authenticated %}
+                        <li><a style="color:yellow" href="{% url 'logout' %}">Logout</a></li>
+                    {% endif %}
+                               
+                </ul>
+            </div>
+            <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 mt-5">
+                <h4>Contact/Connect with us on</h4>
+                <ul>
+                    <li style="display:inline"><a href="{% url 'home' %}"><i style="color:blue" class="fab fa-facebook fa-2x"></i></a></li>
+                    <li style="display:inline"><a href="{% url 'index' %}"><i style="color:green" class="fab fa-whatsapp fa-2x ml-4"></i></a></li>
+                    <li style="display:inline"><a href="{% url 'profile' %}"><i style="color:purple" class="fab fa-instagram fa-2x ml-4"></i></a></li>
+                    <li style="display:inline"><a href="{% url 'profile' %}"><i style="color:blue" class="fab fa-linkedin fa-2x ml-4"></i></a></li>
+                    <li style="display:inline"><a href="{% url 'profile' %}"><i style="color:blue" class="fab fa-dropbox fa-2x ml-4"></i></a></li>
+                    <li style="display:block"><i style="color:green" class="fas fa-phone ml-4 mt-5"></i>+234-8131-615-393</li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mt-5" style="color:white">
+                <h4>About</h4>
+                <p>Welcome to RHOKAYE school. We are known for our impact on students. All we need is your trust and we give you our best</p>
+                <p>Rhokaye was founded in the year 1999 under a man named RHOKAYE</p>
+            </div>
+        </div>
+        <div style="display:block; color:white"><i style="color:red" class="fas fa-map-marker-alt fa-2x ml-4 mt-5"></i> 1, Rhokaye Quarters, iyana ilogbo, shibiri ekunpa, Ojo, Lagos state. Nigeria</div>
     </footer>
-{% endblock %}
+</div>
+    </body>
+     
+
+</html>

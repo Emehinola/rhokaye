@@ -1,0 +1,89 @@
+{% extends 'vacancy/vacbase.html' %}{% load static %}{% block content %}
+<link rel="stylesheet" href="{% static 'Profile/css/access.css' %}">
+<title>{title}</title>
+<div class="container-fluid">
+<div class="jumbotron">
+    <h1 class="display-3"><pre>         </pre></h1>
+    <p class="lead"></p>
+    <div class="row">
+         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6" id="a"><a href="/student/profile">
+        <h4>Profile</h4>
+            <p>Click here to access</p></a>
+          </div>
+          <br>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6" id="b"><h4>Profile</h4>
+            <p>Click here to access</p>
+          </div>
+          <br>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6" id="c"><h4>Results</h4>
+            <p>Click here to access</p>
+          </div>
+          <br>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6" id="d">
+        <h4>Class Notes</h4>
+            <p>Click here to access</p>
+          </div>
+          <br>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6" id="e"><h4>Payment</h4>
+            <p>Click here to access</p>
+          </div>
+          <br>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6" id="f"><h4>Complain/Suggestion</h4>
+            <p>Click here to access</p>
+          </div>
+    </div>
+    <p>Account</p>
+    <div class="lead">
+        <a class="btn btn-primary btn-lg" href="/home" role="button">Logout</a>
+    </div>
+</div>
+</div>
+    <!--
+<div class="access-container">
+    <a href="#" class="link">
+        <div class="upper">
+            <a href="profile" class="link">
+                <div class="access-box" id="left">Profile
+                    <hr>
+                    <div class="span">Click here to access</div>
+                </div>
+            </a>
+            <a href="#" class="link">
+                <div class="access-box" id="right">Results
+                    <hr>
+                    <div class="span">Click here to access</div>
+                </div>
+            </a>
+
+        </div>
+        <div class="middle">
+            <a href="#" class="link">
+                <div class="access-box" id="left">Payment
+                    <hr>
+                    <div class="span">Click here to access</div>
+                </div>
+            </a>
+            <a href="#" class="link">
+                <div class="access-box" id="right">Class notes
+                    <hr>
+                    <div class="span">Click here to access</div>
+                </div>
+            </a>
+        </div>
+        <div class="lower">
+            <a href="#" class="link">
+                <div class="access-box" id="left">Based test
+                    <hr>
+                    <div class="span">Click here to access</div>
+                </div>
+                <a href="#" class="link">
+                    <div class="access-box" id="right">Suggestion
+                        <hr>
+                        <div class="span">Click here to access</div>
+                    </div>
+                </a>
+        </div>
+</div>-->
+{% endblock %}

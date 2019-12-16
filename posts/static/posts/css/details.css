@@ -5,6 +5,11 @@
 
 .main {
     margin-top: 10px;
+    float: none;
+}
+
+.left-div {
+    display: none;
 }
 
 .news-head {
@@ -14,22 +19,18 @@
 }
 
 .news-body {
-    font-size: 18px;
+    font-size: 15px;
     text-align: left;
     color: black;
 }
 
 .by {
-    color: darkslategrey;
+    color: green;
 }
 
 #sc:visited {
     font-weight: bolder;
     color: palevioletred;
-}
-
-.img-responsive {
-    width: 100%;
 }
 
 .back {
@@ -50,7 +51,7 @@ a {
 }
 
 .card {
-    width: 100%;
+    width: 400px;
     background-color: slategrey;
 }
 
@@ -58,10 +59,11 @@ a {
     height: 280px;
 }
 
-form {
-    width: 40%;
+.head {
+    font-family: cursive;
+    color: brown;
 }
 
-textarea {
-    height: 20px;
+article {
+    background-color: lavender;
 }

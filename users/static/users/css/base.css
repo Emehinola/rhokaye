@@ -77,11 +77,6 @@
         font-size: 20px;
     }
     
-    .right-container {
-        height: 100%;
-        background-color: yellowgreen;
-    }
-    
     .image {
         width: 100%;
         height: 300px;
@@ -125,10 +120,6 @@
         font-size: 20px
     }
     
-    .left-div {
-        display: none
-    }
-    
     .main {
         margin-top: 0%;
         width: 100%;
@@ -142,6 +133,10 @@
     .alert {
         width: 400px;
         display: block;
+    }
+    
+    a {
+        color: white
     }
     
     @media only screen and (min-width:769px) {
@@ -279,7 +274,6 @@
             background-color: rgb(93, 185, 185);
             height: 591px;
             width: 340px;
-            overflow: scroll;
         }
         .main {
             margin-top: 10%;

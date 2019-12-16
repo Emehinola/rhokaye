@@ -18,17 +18,12 @@
     border-radius: 3px;
 }
 
-.left-div {
-    display: none;
-}
-
 .main {
     float: none;
 }
 
 .head {
     font-size: 35px;
-    margin-top: 5em;
 }
 
 .bt {

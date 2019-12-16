@@ -25,12 +25,12 @@ class Posts(models.Model):
 
 class Comments(models.Model):
     post_comment = models.ForeignKey("Posts", on_delete=models.CASCADE)
-    user = models.CharField(max_length=20)
+    author = models.CharField(max_length=20)
     body = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.user
+        return self.author
     
     class Meta:
         verbose_name_plural = 'Comments'

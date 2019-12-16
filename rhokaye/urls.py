@@ -18,22 +18,21 @@ from django.conf.urls import url, include
 from users import views as user_views
 from django.conf import settings
 from django.conf.urls.static import static
-from Profile import views as pro_view
+from django.contrib.auth import views as auth_view
+from vacancy import views as vac_views
+
 
 urlpatterns = [
-    url(r'admin/', admin.site.urls),
-    url(r'^parent/access', include("Profile.urls")),
-    url(r'^student/access', include("Profile.urls")),
-    url(r'^staff/access', include("Profile.urls")),
-    url('^parent/profile', pro_view.profile, name='profile'),
-    url('^student/profile', pro_view.profile, name='profile'),
-    url('^staff/profile', pro_view.profile, name='profile'),
-    url(r'^student', user_views.login, name='login'),
-    url(r'^staff', user_views.login, name='login'),
-    url(r'^parent', user_views.login, name='login'),
+    url(r"admin/", admin.site.urls),
+    
+    url(r'login/', auth_view.LoginView.as_view(template_name='users/login.html'), name='login'),
+    url(r'logout/', auth_view.LogoutView.as_view(template_name='users/home.html'), name='logout'),
+    url(r'login/', user_views.login, name='login'),
     url(r'^register', user_views.register, name='register'),
     url(r'home/', user_views.home, name='home'),
     url(r'posts/', include('posts.urls')),
+    url('application', vac_views.application, name='application'),
+    url(r'vacancy', include('vacancy.urls')),
     url(r'^', include('users.urls'))
 ]
 

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'users/css/base.css' %}">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'users/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'posts/css/details.css' %}">
+    <link rel="stylesheet" href="{% static 'users/images/head.png' %}">
+    <link rel="stylesheet" href="{% static 'users/images/bck.png' %}">
+    <link rel="stylesheet" href="{% static 'users/css/all.css' %}">
+    <script type="text/javascript" src="{% static 'users/scripts/bootstrap.min.js' %}" <script src="https://kit.fontawesome.com/9d936a6ca5.js" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color:brown">
+<div class="page-header mb-7" style="background-image: url('{% static 'users/images/bck.png' %}')">
+            <h1 class="head ml-5">RHOKAYE VACANCY PORTAL</h1>
+            <nav class="nav justify-content-center">
+                <a class="nav-link" href="{% url 'home' %}"><i style="color:" class="fas fa-home"></i></a>
+                <a class="nav-link" href="{% url 'index' %}"><i style="color:" class="fas fa-newspaper"></i></a>
+                <a class="nav-link" href="{% url 'vacancy' %}"><i style="color:" class="fas fa-notes-medical"></i></a>
+                <a class="nav-link" href="{% url 'profile' %}"><i style="color:" class="fas fa-user"></i></a>
+            </nav>
+        </div>
+    <div class="container">
+    {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-success">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+    {% block content %}
+        
+    {% endblock  %}
+    </div>
+    
+</body>
+
+</html>

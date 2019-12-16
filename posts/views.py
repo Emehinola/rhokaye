@@ -8,11 +8,8 @@ from .forms import CommentForm
 # Create your views here.
 def index(request):
     #return HttpResponse('Samuel Congrats on your first post')
-    num = 0
+
     comments = Comments.objects.all()
-    for comment in comments:
-        if comment.post_comment_id == 8:
-            num += 1
 
     posts = Posts.objects.all()
     paginator = Paginator(posts, 2)
@@ -35,8 +32,7 @@ def index(request):
         'page_range': page_range,
         'posts': posts,
         'items': items,
-        'comments':comments,
-        'num': num
+        'comments':comments
     }
     return render(request, 'posts/index.html', contex)
 
@@ -48,8 +44,10 @@ def details(request, id):
     if request.method == 'POST':
         comment_form = CommentForm(request.POST)
         if comment_form.is_valid:
-            comment_form.save()
-            comment_form = CommentForm(request.POST)
+            comment = comment_form.save(commit=False)
+            comment.post_comment_id = id
+            comment.save()
+            comment = CommentForm(request.POST)
     else:
         comment_form = CommentForm()
     

@@ -1,5 +1,5 @@
 .body {
-    background-color: #990033;
+    background-color: cornflowerblue
 }
 
 .apply {
@@ -63,7 +63,7 @@
 
 a#home:visited {
     font-weight: bold;
-    color: palevioletred;
+    color: purple;
 }
 
 .card {
@@ -71,7 +71,7 @@ a#home:visited {
 }
 
 li {
-    color: #990033;
+    color: green;
     font-weight: bold;
     list-style-type: none;
     font-size: 20px;

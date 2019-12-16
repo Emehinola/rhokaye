@@ -15,17 +15,12 @@
         background-color: blue;
     }
     
-    .left-div {
-        display: none;
-    }
-    
     .main {
         float: none;
     }
     
     .head {
         font-size: 35px;
-        margin-top: 5em;
     }
     
     .register {

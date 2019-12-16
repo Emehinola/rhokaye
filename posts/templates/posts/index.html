@@ -1,4 +1,4 @@
-{% extends 'users/base.html' %}{% load static %}{{title}} {% block content %}
+{% extends 'vacancy/vacbase.html' %}{% load static %}{{title}} {% block content %}
 
 <link rel="stylesheet" href="{% static 'posts/css/index.css' %}">
 
@@ -9,11 +9,12 @@
         <article class="article">
         <div class="news-head">
             <h5>{{post.title}}</h5>
-        </div>
-        <img src='{{ post.image.url }}' alt="" class="img-responsive" />
-        {{post.body|truncatechars:300}}...
+        </div><hr>
+        <img src='{{ post.image.url }}' alt="" class="img-responsive" /><hr>
+        {{post.body|linebreaks|truncatechars:300}}...
             <hr><a class="read-more" href="/posts/details/{{post.id}}">Continue reading</a>
-            <div class="by">Posted by {{post.author}} At {{post.created_at}}</div> Comments {{num}}</article>
+            <div class="by">Posted by {{post.author}} At {{post.created_at}}</div> Comments {{post.comment.count}}</article>
+
     </div>
     {% endfor %}
     {% if items.has_other_pages %}
