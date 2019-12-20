@@ -1,0 +1,139 @@
+.left-div {
+    display: none;
+}
+
+.main {
+    float: none;
+    margin-top: 0%;
+    width: 100%
+}
+
+.access-head {
+    margin-top: 140px;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.access-container {
+    height: 400px;
+    width: 700px;
+    margin-top: 10px;
+}
+
+.access-box {
+    height: 100px;
+    width: 250px;
+    background-color: blue;
+    border-radius: 5px 5px 0px 0px;
+    font-weight: bold;
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+.upper {
+    width: 600px;
+    height: 200px;
+}
+
+.lower {
+    width: 600px;
+    height: 200px;
+}
+
+.middle {
+    width: 600px;
+    height: 200px;
+}
+
+#left {
+    float: left;
+}
+
+#right {
+    float: right;
+}
+
+.span {
+    font-size: 18px;
+}
+
+.container {
+    position: relative;
+    top: 0px;
+    width: 100%;
+}
+
+.row {
+    position: relative;
+    top: -100px;
+}
+
+#a {
+    background-color: aqua;
+    text-align: left;
+    height: 180px;
+    margin: 10px;
+    margin-left: 0px;
+    border-radius: 3px;
+}
+
+#b {
+    background-color: blue;
+    text-align: left;
+    height: 180px;
+    margin: 10px;
+    margin-left: 0px;
+}
+
+#c {
+    background-color: red;
+    text-align: left;
+    height: 180px;
+    margin: 10px;
+    margin-left: 0px;
+}
+
+#d {
+    background-color: navajowhite;
+    text-align: left;
+    height: 180px;
+    margin: 10px;
+    margin-left: 0px;
+}
+
+#e {
+    background-color: violet;
+    text-align: left;
+    height: 180px;
+    margin: 10px;
+    margin-left: 0px;
+}
+
+#f {
+    background-color: aqua;
+    text-align: left;
+    height: 180px;
+    margin: 10px;
+    margin-left: 0px;
+}
+
+h4 {
+    color: cornflowerblue;
+}
+
+.jumbotron {
+    width: 1000px;
+}
+
+.col-lg-4 {
+    overflow: hidden;
+}
+
+p {
+    position: absolute;
+    bottom: 0%;
+}
+
+#head {
+    display: none;
+}

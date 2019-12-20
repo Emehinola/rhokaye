@@ -1,0 +1,58 @@
+.head-break {
+    text-align: left;
+    background-color: lavender;
+    background-image: url("apply.png");
+    border-radius: 1.5px;
+    margin-bottom: 10px;
+}
+
+.body {
+    background-color: whitesmoke;
+}
+
+.jumbotron {
+    text-align: left;
+    margin-top: -10px;
+}
+
+.head {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.by {
+    color: darkgray;
+}
+
+#hm:visited {
+    font-weight: bold;
+    color: white;
+}
+
+a#news:visited {
+    font-weight: bold;
+    color: palevioletred;
+}
+
+.all-news {
+    margin-top: 0%;
+}
+
+.read-more {
+    text-decoration: none;
+    float: right;
+    color: blue;
+}
+
+.img-responsive {
+    height: 300px;
+}
+
+.article {
+    margin: 5px;
+    color: white;
+}
+
+.news-head {
+    color: darkkhaki;
+}
