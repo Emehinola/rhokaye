@@ -3,7 +3,9 @@
 <div class="row" style="background-color:lavender">
     <div class="col-lg-offset-4 col-lg-6 col-sm-12 col-md-12 col-xs-12">
     <h6 class="display-4 text-center">Profile Page</h6>
-    <p class="lead"><div class="profile-pix"><img src="{{user.profile.image.url}}" alt="pix" class="img-responsive" /></div>
+
+{% if user.profile.category == "Student" %}
+    <div class="profile-pix"><img src="{{user.profile.image.url}}" alt="pix" class="img-responsive rounded-circle" /></div>
     <hr>
     <div class="sub-head">Student's Personal Biodata</div>
     <div class="full-data"><br>
@@ -15,21 +17,39 @@
         <div class="bio-data"><strong id="address">Residence address</strong><span style="float:right">{{user.profile.address}}</span><hr></div>
         <div class="bio-data"><strong id="rel">Religion</strong><span style="float:right">{{user.profile.religion}}</span><hr></div>
     </div>
-    <div class="sub-head">Accademy's Information</div>
+    <div class="sub-head">Candidate Information</div>
     <div class="full-data"><br>
-        <div class="bio-data"><strong id="class">Class</strong><span style="float:right">samuel</span><hr></div>
-        <div class="bio-data"><strong id="depart">Department</strong><span style="float:right">samuel</span><hr></div>
-        <div class="bio-data"><strong id="post">Post</strong><span style="float:right">samuel</span><hr></div>
+        <div class="bio-data"><strong id="class">Class</strong><span style="float:right">{{user.profile.Class}}</span><hr></div>
+        <div class="bio-data"><strong id="depart">Department</strong><span style="float:right">{{user.profile.department}}</span><hr></div>
+        <div class="bio-data"><strong id="post">Post</strong><span style="float:right">{{user.profile.post}}</span><hr></div>
     </div>
     <div class="sub-head">Parent's Information</div>
     <div class="full-data"><br>
-        <div class="bio-data"><strong id="name"> Parent's Full Name</strong><span style="float:right">samuel</span><hr></div>
-        <div class="bio-data"><strong id="occupation">Occupation</strong><span style="float:right">samuel</span><hr></div>
-        <div class="bio-data"><strong id="name">Nationality</strong><span style="float:right">samuel</span><hr></div>
-        <div class="bio-data"><strong id="origin">Origin</strong><span style="float:right">samuel</span><hr></div>
-        <div class="bio-data"><strong id="address">Residence address</strong><span style="float:right">samuel</span><hr></div>
-        <div class="bio-data"><strong id="rel">Religion</strong><span style="float:right">samuel</span><hr></div>
-    </div></p>
+        <div class="bio-data"><strong id="name"> Parent's Full Name</strong><span style="float:right">{{user.profile.parent_name}}</span><hr></div>
+        <div class="bio-data"><strong id="occupation">Occupation</strong><span style="float:right">{{user.profile.occupation}}</span><hr></div>
+        <div class="bio-data"><strong id="origin">Phone Number</strong><span style="float:right">{{user.profile.parent_number}}</span><hr></div>
+        <div class="bio-data"><strong id="address">Residence address</strong><span style="float:right">{{user.profile.parent_address}}</span><hr></div>
+    </div>
+    {% else %}
+        <p class="lead"><div class="profile-pix"><img src="{{user.staffprofile.image.url}}" alt="pix" class="img-responsive rounded-circle" /></div>
+    <hr>
+    <div class="sub-head">Student's Personal Biodata</div>
+    <div class="full-data"><br>
+        <div class="bio-data"><strong id="name">Full Name</strong><span style="float:right">{{user.first_name}} {{user.last_name}}</span><hr></div>
+        <div class="bio-data"><strong id="class">Gender</strong><span style="float:right">{{user.staffprofile.gender}}</span><hr></div>
+        <div class="bio-data"><strong id="country">Nationality</strong><span style="float:right">{{user.staffprofile.nationality}}</span><hr></div>
+        <div class="bio-data"><strong id="origin">Origin</strong><span style="float:right">{{user.staffprofile.state}}</span><hr></div>
+        <div class="bio-data"><strong id="address">Residence address</strong><span style="float:right">{{user.staffprofile.address}}</span><hr></div>
+        <div class="bio-data"><strong id="rel">Religion</strong><span style="float:right">{{user.staffprofile.religion}}</span><hr></div>
+    </div>
+    <div class="sub-head">Work Information</div>
+    <div class="full-data"><br>
+        <div class="bio-data"><strong id="class">Payment Status</strong><span style="float:right">{{user.staffprofile.payment_status}}</span><hr></div>
+        <div class="bio-data"><strong id="depart">Date joined</strong><span style="float:right">{{user.staffprofile.date_joined}}</span><hr></div>
+        <div class="bio-data"><strong id="post">Post</strong><span style="float:right">{{user.staffprofile.post}}</span><hr></div>
+    </div>
+
+    {% endif %}
     <hr class="my-2">
     <p>More info</p>
     <p class="lead">

@@ -4,26 +4,25 @@
 <h3>News In Details</h3>
 <article class="article">
     <div class='news-head'>
-        <h3>{{posts.title}}</h3>
+        <h4>{{posts.title}}</h4>
         <div class="by">Posted by {{posts.author}} At {{posts.created_at}}</div>
         <hr>
     </div>
-    <img src='{{ posts.image.url }}' alt="" class="img-responsive mr-5" /><hr>
+    <img src='{{ posts.image.url }}' alt="" class="img-responsive" /><hr>
     <div>
         <article class="news-body">{{posts.body|linebreaks}}</article><br>
         
         <a href="/posts/?page=1" class="btn btn-primary" role="button">&lArr; Back</a><hr>
-
 </article>
-<h4>Discussions</h4>
+<h4>Discussions <i class="fa fa-arrow-circle-down" aria-hidden="true"></i></h4>
+<span style="color:yellow">Comments {{posts.post_comment.count}}</span>
 <div class="row">
 <div class="col-lg-6 md-12 sm-12 xs-12">
 {% for comment in comments %}
     {% if comment.post_comment_id == posts.id %}
         <div class="card text-white bg-slategrey" style="display:block">
-          <img class="card-img-top" src="holder.js/100px180/" alt="">
           <div class="card-body">
-            <h4 class="card-title" style="float:left">{{comment.author}}</h4>
+            <h5 class="card-title" style="float:left; color:purple">{{comment.author}}</h5>
             <p class="card-text" style="color:brown; display:block">-{{comment.created}}</p>
             <p class="card-text">{{comment.body}}</p>
           </div>
@@ -31,9 +30,8 @@
     {% endif %}
 {% endfor %}
 </div>
-<div class="col-lg-6 md-12 sm-12 xs-12 mt-5">
 <form method="POST" action="">
-<div class="form-group">
+<div class="form-group ml-5">
     <legend class="legend">Comment</legend>
     {% csrf_token %}
     {{ comment_form|crispy }}

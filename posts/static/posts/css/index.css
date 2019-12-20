@@ -21,7 +21,7 @@
 }
 
 .by {
-    color: darkslategrey;
+    color: darkgray;
 }
 
 #hm:visited {
@@ -45,19 +45,14 @@ a#news:visited {
 }
 
 .img-responsive {
-    width: 100%;
     height: 300px;
-    width: 600px;
 }
 
 .article {
     margin: 5px;
+    color: white;
 }
 
 .news-head {
-    color: blue;
-}
-
-.left-div {
-    display: none;
+    color: darkkhaki;
 }

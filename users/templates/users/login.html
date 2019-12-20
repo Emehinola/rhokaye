@@ -1,22 +1,55 @@
-{% extends 'vacancy/vacbase.html' %} {% load static %} {% block content %}
-<link rel="stylesheet" href="{% static 'users/css/login.css' %}">
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
 {% load crispy_forms_tags %}
-<body style="background-image:url({% static 'users/images/bck.png' %}); background-repeat:none">
-<div class="main-login" style="background-image:url({% static 'users/images/bck.png' %})">
-    <center>
-        <div class="jumbotron">
-            <h5 class="display-3">Login</h5>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'users/css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'users/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'users/css/all.css' %}" >
+</head>
+
+<body>
+
+    <body style="background-image:url({% static 'users/images/bck4.png' %}); background-repeat:none">
+        <div class="container">
+            <div class="row mt-5">
+            <div class="offset-lg-4 col-lg4 offset-md 2 col-md-8 offset-sm-2 col-sm-8 offset-xs-2 col-xs-8">
+            <h5 class="display-3" style="color:green">Login</h5>
             <hr>
-            <p class="lead">Enter your valid details to access your accounts</p>
+            <p class="lead" style="color:yellow">Enter your valid details to access your accounts</p>
             <hr class="my-2">
             <form method="POST">
-                {% csrf_token %}
-                {{ form|crispy }}
-                <button class="btn btn-info" type="submit">Access</button>
+                <div class="form-group" style="width:50%">
+                    {% csrf_token %} {{ form|crispy }}
+                    <button class="btn btn-info" type="submit">Access</button>
+                </div>
+                <a href="" style="color:red">Forgot password?</a>
+                <a href="{% url 'home' %}" style="color:green" class="ml-5">Back to home page</a>
             </form>
-
+            </div>
+            </div>
         </div>
-    </center>
+    </body>
+<div class="container-fluid" style="background-color:black">
+    <footer class="page-footer">
+        <div class="row mt-5">
+            <div class="offset-lg-4 col-lg-6 col-md-12 col-sm-12 col-xs-12 mt-5">
+                <ul>
+                    <li style="display:inline"><a href="{% url 'home' %}"><i style="color:blue" class="fab fa-facebook fa-2x"></i></a></li>
+                    <li style="display:inline"><a href="{% url 'index' %}"><i style="color:green" class="fab fa-whatsapp fa-2x ml-4"></i></a></li>
+                    <li style="display:inline"><a href="{% url 'profile' %}"><i style="color:purple" class="fab fa-instagram fa-2x ml-4"></i></a></li>
+                    <li style="display:inline"><a href="{% url 'profile' %}"><i style="color:blue" class="fab fa-linkedin fa-2x ml-4"></i></a></li>
+                    <li style="display:inline"><a href="{% url 'profile' %}"><i style="color:blue" class="fab fa-dropbox fa-2x ml-4"></i></a></li>
+                    <li style="display:block"><i style="color:green" class="fas fa-phone ml-4 mt-5"></i>+234-8131-615-393</li>
+                </ul>
+            </div>
+        </div>
+        <div style="display:block; color:white"><i style="color:red" class="fas fa-map-marker-alt fa-2x mt-5"></i>Rhokaye Copyright@2019<span style="color:yellow" class="ml-5"><i class="fab fa-internet-explorer fa-2x" style="color:grey"></i> Website designed and developed by Emehinola Samuel</span></div>
+        
+    </footer>
 </div>
-
-{% endblock %}
+</html>

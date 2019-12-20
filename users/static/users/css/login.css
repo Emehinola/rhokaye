@@ -53,9 +53,6 @@
     display: block;
 }
 
-.jumbotron {
-    text-align: left;
-    box-shadow: 3px 3px;
-    position: absolute;
-    top: 15%;
+.container {
+    width: 50%;
 }

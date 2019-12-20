@@ -1,31 +1,17 @@
-.jumbotron {
-    margin-top: 0%;
-    text-align: left;
-}
-
-.main {
-    margin-top: 10px;
-    float: none;
-}
-
-.left-div {
-    display: none;
-}
-
 .news-head {
     font-size: 20px;
     text-align: left;
-    color: blue;
+    color: darkkhaki;
 }
 
 .news-body {
     font-size: 15px;
     text-align: left;
-    color: black;
+    color: white
 }
 
 .by {
-    color: green;
+    color: grey;
 }
 
 #sc:visited {
@@ -47,7 +33,7 @@ a {
 }
 
 .card-title {
-    color: rgb(13, 235, 168);
+    color: grey;
 }
 
 .card {
@@ -57,6 +43,7 @@ a {
 
 .img-responsive {
     height: 280px;
+    width: 100%;
 }
 
 .head {
@@ -65,5 +52,5 @@ a {
 }
 
 article {
-    background-color: lavender;
+    background-color: ;
 }

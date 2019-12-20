@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="{% static 'users/images/head.png' %}">
     <link rel="stylesheet" href="{% static 'users/images/bck.png' %}">
     <link rel="stylesheet" href="{% static 'users/css/home.css' %}">
-    <script type="text/javascript" src="{% static 'users/scripts/bootstrap.min.js' %}"
+    <script type="text/javascript" src="{% static 'users/js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'users/js/slide.js' %}"></script>
     <script src="https://kit.fontawesome.com/9d936a6ca5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'users/css/all.css' %}" >
     </head>
@@ -22,8 +23,8 @@
     <body  style="background-color:cornflowerblue">
 <div class="page-header mb-7" style="background-image: url('{% static 'users/images/bck.png' %}')">
             <h1 class="head ml-5">RHOKAYE COLLEGE</h1>
-            <div class="d-sm-none d-md-block d-lg-block d-xs-none">
-            <nav class="nav justify-content d-xs-hidden">
+            <div class="d-block">
+            <nav class="nav justify-content-center">
                 <li class="nav-item">
                               <a class="nav-link" href="{% url 'home' %}" id="home">Home<span class="sr-only"></span></a>
                           </li>
@@ -34,21 +35,16 @@
                               <a class="nav-link" href="{% url 'vacancy' %}" id="vacancy">Vacancy</a>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link" href="{% url 'profile' %}" id="staff">Staff</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="{% url 'profile' %}" id="Parent">Parent</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="{% url 'profile' %}" id="Student">Student</a>
+                              <a class="nav-link" href="{% url 'profile' %}" id="staff">Profile</a>
                           </li>
             </nav>
             
         </div>
         </div>
+        <p class="lead"><img id="image" src="{% static 'users/images/sch_comp.png' %}" height="300px" width="100%%" /></p>
     <div class="container-fluid">
       <h1 class="display-6 ali">Rhokaye Nursery and Primary Schools</h1><hr class="my-2">
-      <p class="lead"><img class="image" src="{% static 'users/images/sch_comp.png' %}" height="300px" width="100%%" /></p>
+      
         <div style="display:inline; color:black"><i style="color:red" class="fas fa-map-marker-alt fa-2x ml-4 mt-5"></i> 1, Rhokaye Quarters, iyana ilogbo, shibiri ekunpa, Ojo, Lagos state. Nigeria</div>
         <br><br>
       <div class="row">
@@ -128,7 +124,7 @@
                 <div class="jumbotron" style="background-color:lavender">
                 <h5 class="display-6" style="color:red; font-family:cursive">DIRECT FROM THE PRINCIPAL'S DESK</h5>
                 <hr class="my-2">
-                    <img id="paul" src="{% static 'users/images/principal.jpg' %}" alt="principal photo" />
+                    <img id="paul" src="{% static 'users/images/principal.jpg' %}" alt="principal photo" class="rounded-circle" />
                     <h5 class="display-6">FROM THE PRINCIPAL'S DESK</h5>
                     <p class="lead">Welcome to the RHOKAYE COLLEGE, the school for breeding geinus.
                     In this school, we dont trade Students ignorant rather we unlock the inner importance.
@@ -147,7 +143,7 @@
                 </div>
        
 </div>
-<div class="container-fluid" style="background-color:black">
+<div class="container-fluid" style="background-color:#262b2b">
     <footer class="page-footer">
         <div class="row">
             <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 mt-5">
@@ -155,10 +151,9 @@
                 <ul>
                     <li><a style="color:white" href="{% url 'home' %}">Home Page</a></li>
                     <li><a style="color:purple" href="{% url 'index' %}">News Updates</a></li>
-                    <li><a style="color:red" href="{% url 'profile' %}">Student</a></li>
-                    <li><a style="color:pink" href="{% url 'profile' %}">Parent</a></li>
-                    <li><a style="color:green" href="{% url 'profile' %}">Staff</a></li>
-                    {% if user.authenticated %}
+                    <li><a style="color:red" href="{% url 'profile' %}">Profile</a></li>
+                    <li><a style="color:green" href="{% url 'vacancy' %}">Vacancy</a></li>
+                    {% if user.is_authenticated %}
                         <li><a style="color:yellow" href="{% url 'logout' %}">Logout</a></li>
                     {% endif %}
                                
@@ -178,10 +173,11 @@
             <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mt-5" style="color:white">
                 <h4>About</h4>
                 <p>Welcome to RHOKAYE school. We are known for our impact on students. All we need is your trust and we give you our best</p>
-                <p>Rhokaye was founded in the year 1999 under a man named RHOKAYE</p>
+                <p>Rhokaye was founded in the year 1995 under a man named RHOKAYE</p>
             </div>
         </div>
-        <div style="display:block; color:white"><i style="color:red" class="fas fa-map-marker-alt fa-2x ml-4 mt-5"></i> 1, Rhokaye Quarters, iyana ilogbo, shibiri ekunpa, Ojo, Lagos state. Nigeria</div>
+        <div style="display:block; color:white"><i style="color:red" class="fas fa-map-marker-alt fa-2x mt-5"></i> 1, Rhokaye Quarters, iyana ilogbo, shibiri ekunpa, Ojo, Lagos state. Nigeria<span style="color:yellow" class="ml-5"><i class="fab fa-internet-explorer fa-2x" style="color:grey"></i> Website designed and developed by Emehinola Samuel</span></div>
+        
     </footer>
 </div>
     </body>

@@ -47,7 +47,7 @@ def details(request, id):
             comment = comment_form.save(commit=False)
             comment.post_comment_id = id
             comment.save()
-            comment = CommentForm(request.POST)
+            comment = CommentForm()
     else:
         comment_form = CommentForm()
     
