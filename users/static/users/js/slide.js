@@ -1,6 +1,6 @@
 // javascript to create a slide show in the browser
 
-var images = ["static/users/images/sch_comp.png", "static/users/images/bck2.png", "static/users/images/bck6.png", "static/users/images/bck7.png"];
+var images = ["static/users/images/sch_comp.png", "static/users/images/bck2.png", "static/users/images/bck7.png"];
 var img_index = 0;
 
 // fuction for the next button

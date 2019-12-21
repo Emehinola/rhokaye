@@ -33,18 +33,20 @@
     {% else %}
         <p class="lead"><div class="profile-pix"><img src="{{user.staffprofile.image.url}}" alt="pix" class="img-responsive rounded-circle" /></div>
     <hr>
-    <div class="sub-head">Student's Personal Biodata</div>
+    <div class="sub-head">Staff's Personal Biodata</div>
     <div class="full-data"><br>
         <div class="bio-data"><strong id="name">Full Name</strong><span style="float:right">{{user.first_name}} {{user.last_name}}</span><hr></div>
         <div class="bio-data"><strong id="class">Gender</strong><span style="float:right">{{user.staffprofile.gender}}</span><hr></div>
         <div class="bio-data"><strong id="country">Nationality</strong><span style="float:right">{{user.staffprofile.nationality}}</span><hr></div>
         <div class="bio-data"><strong id="origin">Origin</strong><span style="float:right">{{user.staffprofile.state}}</span><hr></div>
         <div class="bio-data"><strong id="address">Residence address</strong><span style="float:right">{{user.staffprofile.address}}</span><hr></div>
+        <div class="bio-data"><strong id="origin">Phone Number</strong><span style="float:right">{{user.staffprofile.phone}}</span><hr></div>
+        <div class="bio-data"><strong id="origin">Email</strong><span style="float:right">{{user.email}}</span><hr></div>
         <div class="bio-data"><strong id="rel">Religion</strong><span style="float:right">{{user.staffprofile.religion}}</span><hr></div>
     </div>
     <div class="sub-head">Work Information</div>
     <div class="full-data"><br>
-        <div class="bio-data"><strong id="class">Payment Status</strong><span style="float:right">{{user.staffprofile.payment_status}}</span><hr></div>
+        <div class="bio-data"><strong id="class">Payment Status</strong><span style="float:right">{{user.staffprofile.Payment_status}}</span><hr></div>
         <div class="bio-data"><strong id="depart">Date joined</strong><span style="float:right">{{user.staffprofile.date_joined}}</span><hr></div>
         <div class="bio-data"><strong id="post">Post</strong><span style="float:right">{{user.staffprofile.post}}</span><hr></div>
     </div>

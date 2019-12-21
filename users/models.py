@@ -6,7 +6,6 @@ class  Profile(models.Model):
     # students details
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = models.ImageField(default='', upload_to='posts_pics')
-    email = models.EmailField(default="")
     state = models.CharField(default="",max_length=15)
     nationality = models.CharField(default="",max_length=15)
     address = models.CharField(default="",max_length=50)
@@ -33,7 +32,6 @@ class  StaffProfile(models.Model):
     # staff details
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = models.ImageField(default='', upload_to='posts_pics')
-    email = models.EmailField(default="")
     state = models.CharField(default="",max_length=15)
     nationality = models.CharField(default="",max_length=15)
     address = models.CharField(default="",max_length=50)
@@ -41,7 +39,6 @@ class  StaffProfile(models.Model):
     category = models.CharField(default="",max_length=30)
     post = models.CharField(default="",max_length=10)
     department = models.CharField(default="",max_length=30)
-    payment_choices = ("Paid", "Pending",  "Not Paid")
     phone = models.CharField(default="",max_length=14)
     Payment_status = models.CharField(default="",max_length=50)
     date_joined = models.CharField(default="",max_length=30)

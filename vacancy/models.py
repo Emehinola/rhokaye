@@ -26,6 +26,8 @@ class Applications(models.Model):
     post = models.CharField(max_length=100)
     qualifications = models.CharField(max_length=100)
     cv = models.FileField(null=True,upload_to='Cv')
+    email = models.CharField(default="", max_length=40)
+    phone = models.CharField(default="",max_length=14)
     years_of_experience = models.IntegerField()
     location = models.CharField(max_length=200)
     created_at = models.DateField(auto_now=True)

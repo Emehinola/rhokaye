@@ -9,6 +9,8 @@ class Application(forms.ModelForm):
     last_name = forms.CharField(max_length=30)
     post = forms.CharField(max_length=100)
     qualifications = forms.CharField(max_length=100)
+    email = forms.EmailField()
+    phone = forms.CharField(max_length=14)
     years_of_experience = forms.IntegerField()
     location = forms.CharField(max_length=200)
     created_at = models.DateField(auto_now_add=True)
@@ -17,4 +19,4 @@ class Application(forms.ModelForm):
     class Meta:
 
         model = Applications
-        fields = ['first_name', 'last_name', 'vacancy', 'post', 'qualifications', 'years_of_experience', 'location']
+        fields = ['first_name', 'last_name', 'vacancy', 'post', 'email', 'phone', 'qualifications', 'years_of_experience', 'location']
