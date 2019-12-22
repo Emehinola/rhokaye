@@ -25,7 +25,7 @@ class Applications(models.Model):
     last_name = models.CharField(default="",max_length=30)
     post = models.CharField(max_length=100)
     qualifications = models.CharField(max_length=100)
-    email = models.CharField(max_length=100)
+    email_address = models.CharField(max_length=100)
     phone = models.CharField(default="",max_length=20)
     years_of_experience = models.IntegerField()
     location = models.CharField(max_length=200)

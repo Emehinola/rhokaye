@@ -9,7 +9,7 @@ class Application(forms.ModelForm):
     last_name = forms.CharField(max_length=30)
     post = forms.CharField(max_length=100)
     qualifications = forms.CharField(max_length=100)
-    email = forms.EmailField()
+    email_address = forms.CharField(max_length=100)
     phone = forms.CharField(max_length=20)
     years_of_experience = forms.IntegerField()
     location = forms.CharField(max_length=200)
