@@ -77,6 +77,7 @@
         <a class="btn btn-primary btn-lg" href="{% url 'home' %}" role="button">Enroll/Enquire</a>
       </p>
       </div>
+    <div class="row">
     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
     <h2 id="abt"> About</h2>
 
@@ -91,27 +92,29 @@
                 <p> You don't need to worry about payments and book purchases, we have structured a convenient mean of fees payment that won't burden you.</p>
                 </p></p>
           </div>
-           <br>
            </div>
+        </div>
         </div>
         <br>
         <br>
-    <div class="row">        
-        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-        <div class="jumbotron">
-        <h1 class="display-6">Educational Quotes</h1>
+    <div class="row">
+    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+    <div class="card" style="background-color:lavender; border-color:darkblue;">
+          <div class="card-body">
+            <h4 class="card-title">Educational Quotes</h4>
             <p> Education is what remains after one has forgotten everything he learned in school. Albert Einstein.</p>
                 <p>The beautiful thing about learning is nobody can take it away from you. B. B. King</p>
                 <p>The ideal school would teach health, wealth, and happiness. It‘d be free, self-paced, and available to all. It‘d show opposing ideas and students would self-verify truth. No grades, no tests, no diplomas – just learning. Actually, you’re already here. Careful who you follow. Naval Ravikant
                 </p>
                 <p>Every person with a smartphone and a pair of headphones has access to the kind of education that was once reserved for the sons of aristocracy. The Stoic Emperor
                 </p>
-                
-                
-          </div>
+          </div>        
+        
         </div>
+        </div>
+        </div>
+        <div class="row">
         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-        <div class="jumbotron">
           <h1 class="display-6">Why Us</h1>
           <p class="lead">We are known for our great mark in the education sector <span class="glyphicon glyphicon-phone"></span> </p>
           <hr class="my-2">
@@ -125,13 +128,16 @@
           
         </div>
         </div>
+        </div>
         
-                <div class="jumbotron" style="background-color:lavender">
-                <h5 class="display-6" style="color:red; font-family:cursive">DIRECT FROM THE PRINCIPAL'S DESK</h5>
-                <hr class="my-2">
-                    <img id="paul" src="{% static 'users/images/principal.jpg' %}" alt="principal photo" class="rounded-circle" />
-                    <h5 class="display-6">FROM THE PRINCIPAL'S DESK</h5>
-                    <p class="lead">Welcome to the RHOKAYE COLLEGE, the school for breeding geinus.
+        <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+
+        <div class="card" style="background-color:cadetblue; border-color:darkblue;">
+          <img class="card-img-top" src="{% static 'users/images/principal.jpg' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">DIRECT FROM THE PRINCIPAL'S DESK</h4>
+               <p class="lead">Welcome to the RHOKAYE COLLEGE, the school for breeding geinus.
                     In this school, we dont trade Students ignorant rather we unlock the inner importance.
                     </p>
                     <p class="lead"><h6>ASSURANCE</h6>
@@ -145,9 +151,13 @@
                     <p class="lead">
                         <a class="btn btn-primary btn-lg" href="{% url 'home' %}" role="button">Enquire</a>
                     </p>
-                </div>
+          </div>
+           </div>
+        </div>
+        </div>
        
 </div>
+<br>
 <div class="container-fluid" style="background-color:#262b2b">
     <footer class="page-footer">
         <div class="row">
