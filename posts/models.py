@@ -35,3 +35,16 @@ class Comments(models.Model):
     class Meta:
         verbose_name_plural = 'Comments'
         ordering = ['-created']
+
+class Announcement(models.Model):
+    title = models.CharField(max_length=100)
+    body = models.TextField()
+    by = models.CharField(max_length=30)
+    time = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name_plural = 'Announcement'
+        ordering = ['-time']

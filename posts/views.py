@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Posts
+from .models import Posts, Announcement
 from .models import Comments
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .forms import CommentForm
@@ -59,3 +59,11 @@ def details(request, id):
     }
 
     return render(request, 'posts/details.html', contex)
+
+def announcement(request):
+    announce = Announcement.objects.all()
+    contex = {
+        'announcement':announce,
+        'title':'Announcement'
+    }
+    return render(request, 'posts/announcement.html', contex)

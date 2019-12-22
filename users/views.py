@@ -27,3 +27,7 @@ def access(request):
 @login_required
 def profile(request):
     return render(request, 'users/profile.html')
+
+@login_required
+def staffprofile(request):
+    return render(request, 'users/staffprofile.html')

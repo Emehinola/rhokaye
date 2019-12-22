@@ -20,6 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_view
 from vacancy import views as vac_views
+from posts import views as post_views
 
 
 urlpatterns = [
@@ -32,6 +33,7 @@ urlpatterns = [
     url(r'home/', user_views.home, name='home'),
     url(r'posts/', include('posts.urls')),
     url('application', vac_views.application, name='application'),
+    url('announcement', post_views.announcement, name='announcement'),
     url(r'vacancy', include('vacancy.urls')),
     url(r'^', include('users.urls'))
 ]

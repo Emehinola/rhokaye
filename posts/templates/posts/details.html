@@ -17,7 +17,7 @@
 <h4>Discussions <i class="fa fa-arrow-circle-down" aria-hidden="true"></i></h4>
 <span style="color:yellow">Comments {{posts.post_comment.count}}</span>
 <div class="row">
-<div class="col-lg-6 md-12 sm-12 xs-12">
+<div class="col-lg-6 md-12 sm-8 xs-8">
 {% for comment in comments %}
     {% if comment.post_comment_id == posts.id %}
         <div class="card text-white bg-slategrey" style="display:block">
@@ -31,7 +31,7 @@
 {% endfor %}
 </div>
 <form method="POST" action="">
-<div class="form-group ml-5">
+<div class="form-group ml-2">
     <legend class="legend">Comment</legend>
     {% csrf_token %}
     {{ comment_form|crispy }}

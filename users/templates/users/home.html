@@ -21,21 +21,24 @@
     </head>
     <body>
     <body  style="background-color:cornflowerblue">
-<div class="page-header mb-7" style="background-image: url('{% static 'users/images/bck.png' %}')">
-            <h1 class="head ml-5">RHOKAYE COLLEGE</h1>
-            <div class="d-block" style="color:white">
+<div class="page-header mb-7" style="background-image: url('{% static 'users/images/bck4.png' %}')">
+            <h1 class="head lg-ml-5 xs-ml-0">RHOKAYE COLLEGE</h1>
+            <div class="d-block">
             <nav class="nav justify-content-center">
                 <li class="nav-item">
                               <a class="nav-link" href="{% url 'home' %}" id="home">Home<span class="sr-only"></span></a>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link" href="{% url 'index' %}" id="news">Updates<span class="sr-only"></span></a>
+                              <a class="nav-link" href="{% url 'index' %}" id="news"  style="color:white">Updates<span class="sr-only"></span></a>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link" href="{% url 'vacancy' %}" id="vacancy">Vacancy</a>
+                              <a class="nav-link" href="{% url 'vacancy' %}" id="vacancy"  style="color:white">Vacancy</a>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link" href="{% url 'profile' %}" id="staff">Profile</a>
+                              <a class="nav-link" href="{% url 'profile' %}" id="staff"  style="color:white">Student</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="{% url 'staffprofile' %}" id="staff"  style="color:white">Staff</a>
                           </li>
             </nav>
             
@@ -91,6 +94,8 @@
            <br>
            </div>
         </div>
+        <br>
+        <br>
     <div class="row">        
         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
         <div class="jumbotron">
