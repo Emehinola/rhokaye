@@ -8,10 +8,10 @@
     <div class="well justify-center" style="color:red">You are not allowed to access this page. Only staffs can access</div>
     {% else %}
        <div class="content">
-          {% for announcements in announcement %}
-            <h6>{{announcements.title}}</h6>
-            <p>{{announcements.body}}</p>
-            <p>{{announcements.by}}</p>
+          {% for announcement in announcements %}
+            <h6>{{announcement.title}}</h6>
+            <p>{{announcement.body}}</p>
+            <p>{{announcement.by}}</p>
           {% endfor %}
        </div>
 

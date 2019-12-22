@@ -63,7 +63,7 @@ def details(request, id):
 def announcement(request):
     announce = Announcement.objects.all()
     contex = {
-        'announcement':announce,
+        'announcements':announce,
         'title':'Announcement'
     }
     return render(request, 'posts/announcement.html', contex)
