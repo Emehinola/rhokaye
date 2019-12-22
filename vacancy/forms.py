@@ -19,4 +19,4 @@ class Application(forms.ModelForm):
     class Meta:
 
         model = Applications
-        fields = ['first_name', 'last_name', 'vacancy', 'post', 'email', 'phone', 'qualifications', 'years_of_experience', 'location']
+        fields = ['first_name', 'last_name', 'vacancy', 'post', 'email_address', 'phone', 'qualifications', 'years_of_experience', 'location']
