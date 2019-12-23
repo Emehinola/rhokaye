@@ -28,7 +28,10 @@ urlpatterns = [
     
     url(r'login/', auth_view.LoginView.as_view(template_name='users/login.html'), name='login'),
     url(r'logout/', auth_view.LogoutView.as_view(template_name='users/home.html'), name='logout'),
-    url(r'login/', user_views.login, name='login'),
+    url(r'password-reset/', auth_view.PasswordResetView.as_view(template_name='users/password_reset.html'), name='password_reset'),
+    url(r'password-reset-done/', auth_view.PasswordResetDoneView.as_view(template_name='users/password_reset_done.html'), name='password_reset_done'),
+    url(r'password-reset-confirm/<uidb64>/<token>/', auth_view.PasswordResetConfirmView.as_view(template_name='users/password_reset_confirm.html'), name='password_reset_confirm'),
+  #  url(r'logout/', user_views.logout, name='logout'),
     url(r'^register', user_views.register, name='register'),
     url(r'home/', user_views.home, name='home'),
     url(r'posts/', include('posts.urls')),

@@ -35,6 +35,7 @@ class  StaffProfile(models.Model):
     state = models.CharField(default="",max_length=15)
     nationality = models.CharField(default="",max_length=15)
     address = models.CharField(default="",max_length=50)
+    email = models.EmailField()
     religion = models.CharField(default="",max_length=20)
     category = models.CharField(default="",max_length=30)
     post = models.CharField(default="",max_length=10)

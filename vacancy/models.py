@@ -20,13 +20,13 @@ class Vacancy(models.Model):
 
 class Applications(models.Model):
 
-    vacancy = models.ForeignKey(Vacancy,default="", on_delete="")
+    vacancy = models.ForeignKey(Vacancy,default="", on_delete=models.CASCADE)
     first_name = models.CharField(default="",max_length=20)
     last_name = models.CharField(default="",max_length=30)
     post = models.CharField(max_length=100)
     qualifications = models.CharField(max_length=50)
-    email_address = models.CharField(max_length=50)
-    phone = models.CharField(default="",max_length=20)
+    email = models.EmailField()
+    phone = models.CharField(max_length=14)
     years_of_experience = models.IntegerField()
     location = models.CharField(max_length=100)
     created_at = models.DateField(auto_now=True)

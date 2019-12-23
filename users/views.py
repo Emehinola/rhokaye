@@ -31,3 +31,4 @@ def profile(request):
 @login_required
 def staffprofile(request):
     return render(request, 'users/staffprofile.html')
+

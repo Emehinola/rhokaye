@@ -27,7 +27,7 @@
                     {% csrf_token %} {{ form|crispy }}
                     <button class="btn btn-info" type="submit">Access</button>
                 </div>
-                <a href="" style="color:red">Forgot password?</a>
+                <a href="{% url 'password_reset' %}" style="color:red">Forgot password?</a>
                 <a href="{% url 'home' %}" style="color:green" class="ml-5">Back to home page</a>
             </form>
             </div>
