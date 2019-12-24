@@ -156,4 +156,4 @@ EMAIL_HOST_PASSWORD = 'emehinola7'
 DEFAULT_FILE_STORAGE = "github_storages.backend.BackendStorages"
 GITHUB_HANDLE = "Emehinola"
 ACCESS_TOKEN = "3225a699e361bf6825b0932df8f06a5beacab062"
-GITHUB_REPO_NAME = "rhokaye-files"
+GITHUB_REPO_NAME = "Rhokaye-files"
