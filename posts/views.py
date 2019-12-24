@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from .models import Posts, Announcement
 from .models import Comments
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from .forms import CommentForm
+from .forms import CommentForm, EnquiryForm
 
 # Create your views here.
 def index(request):
@@ -67,3 +67,19 @@ def announcement(request):
         'title':'Announcement'
     }
     return render(request, 'posts/announcement.html', contex)
+
+def enquiry(request):
+    if request.method == "POST":
+        enquiry_form = EnquiryForm(request.POST)
+        if enquiry_form.is_valid:
+            enquiry_form.save()
+
+    else:
+        enquiry_form = EnquiryForm()
+
+    context = {
+        'enquiries': enquiry_form,
+        'title': 'Enquiry'
+    }
+
+    return render(request, 'posts/enquiry.html', context)

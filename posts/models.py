@@ -48,3 +48,19 @@ class Announcement(models.Model):
     class Meta:
         verbose_name_plural = 'Announcement'
         ordering = ['-time']
+
+class Enquiry(models.Model):
+    Email = models.EmailField()
+    phone = models.CharField(max_length=14)
+    classes_to_enrol = models.CharField(max_length=50)
+    time = models.DateField(auto_now=True)
+
+    def __str__(self):
+        return self.Email
+
+    class Meta:
+        verbose_name_plural = 'Enquiries'
+        ordering = ['-time']
+
+    
+

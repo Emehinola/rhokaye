@@ -1,5 +1,5 @@
 from django import forms
-from .models import Comments, Posts
+from .models import Comments, Posts, Enquiry
 from django.db import models
 
 class CommentForm(forms.ModelForm):
@@ -10,3 +10,13 @@ class CommentForm(forms.ModelForm):
 
         model = Comments
         fields = ['author', 'body']
+
+class EnquiryForm(forms.ModelForm):
+    Email = forms.EmailField()
+    phone = forms.CharField()
+    classes_to_enrol = forms.CharField()
+ 
+    class Meta:
+
+        model = Enquiry
+        fields = ['Email', 'phone','classes_to_enrol']

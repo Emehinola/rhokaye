@@ -1,0 +1,56 @@
+{% extends 'vacancy/vacbase.html' %}{% load static %} {% block content %}
+{% load crispy_forms_tags %}
+<link rel="stylesheet" href="{% static 'profile/css/profile.css' %}">
+
+<div class="container">
+<div class="row mt-5" style="background-color:lavender">
+    <div class="col-offset-lg-4 col-lg-6 col-sm-12 col-md-12 col-xs-12">
+    <h3 class="" style="color:green">Enquiry</h3><hr>
+    <br>
+{% if user.profile.category == "Student" %}
+    <div class="well justify-center" style="color:red">You are not allowed to access this page. Only staffs can access</div>
+    {% else %}
+       <div class="content">
+          Welcome to rhokaye school. Do you have any enquiry or you want to enrol your children into RHOKAYE school?. If yes,
+          then fill the form below.
+       </div>
+        <br>
+        <div class="content">
+          <h5>Available classes</h5>
+          <ul>
+            <li>Kindergarten</li>
+            <li>UBE 1 - 5</li>
+            <li>JUNIOR SECONDARY 1  - 3</li>
+            <li>SENIOR SECONDARY 1 - 3</li>
+          </ul>
+       </div>
+
+       <div class="content">
+          After submitting your enquiries, you get feedback from us within 24 hours of working service.
+          <p style="color:red">Note 1: The total fee to be paid will be contained in the mail notification<p/>
+       </div>
+
+
+       <form method="POST" action="">
+<div class="form-group ml-2">
+    <legend class="legend">Enquiry</legend>
+    {% csrf_token %}
+    {{ enquiries|crispy }}
+      <p style="color:red">
+          Note 2: If you have multiple classes to enrol, seperate them with comma(,)
+       </p>
+    <button class="btn btn-primary" type="submit">Post Enquiry</button>
+</div>
+</form>
+
+    {% endif %}
+    <hr class="my-2">
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="{% url 'profile' %}" role="button">Back</a>
+    </p>
+    <p>Signed - The Principal</p>
+    
+</div>
+</div>
+</div>
+{% endblock %}

@@ -37,6 +37,7 @@ urlpatterns = [
     url(r'posts/', include('posts.urls')),
     url('application', vac_views.application, name='application'),
     url('announcement', post_views.announcement, name='announcement'),
+    url('enquiry', post_views.enquiry, name='enquiry'),
     url(r'vacancy', include('vacancy.urls')),
     url(r'^', include('users.urls'))
 ]
