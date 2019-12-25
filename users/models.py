@@ -31,11 +31,10 @@ class  StaffProfile(models.Model):
 
     # staff details
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    image = models.ImageField(default='download.jpg')
+    image = models.ImageField(default='media/download.jpg', upload_to="profile_pix")
     state = models.CharField(default="",max_length=15)
     nationality = models.CharField(default="",max_length=15)
     address = models.CharField(default="",max_length=50)
-    email = models.EmailField()
     religion = models.CharField(default="",max_length=20)
     category = models.CharField(default="",max_length=30)
     post = models.CharField(default="",max_length=10)
