@@ -1,0 +1,58 @@
+.main-login {
+    background-color: silver;
+    opacity: 0.7;
+    height: 140px;
+    width: 400px;
+}
+
+#head {
+    display: none;
+}
+
+.body {
+    background-image: url("bck.7e40d4549551.png");
+}
+
+.but {
+    margin-top: 8%;
+    border-radius: 3px;
+}
+
+.main {
+    float: none;
+}
+
+.head {
+    font-size: 35px;
+}
+
+.bt {
+    background-color: green;
+    color: whitesmoke;
+}
+
+.input {
+    margin-top: 5%;
+    border-bottom: 2px solid;
+    border-color: black;
+    padding: 7px;
+    width: 250px;
+    border-color: red;
+}
+
+.username {
+    border: none;
+    background: none;
+    font-size: 18px;
+    color: white;
+    outline: none;
+    text-align: center;
+}
+
+.alert {
+    display: block;
+}
+
+.container {
+    width: 50%;
+}
