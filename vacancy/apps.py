@@ -1,5 +1,5 @@
-from django.apps import AppConfig
+#from django.apps import AppConfig
 
 
-class VacancyConfig(AppConfig):
-    name = 'vacancy'
+#class VacancyConfig(AppConfig):
+#    name = 'vacancy'
