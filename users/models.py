@@ -5,7 +5,7 @@ class  Profile(models.Model):
 
     # students details
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    image = models.ImageField(default='', upload_to='posts_pics')
+    image = models.ImageField(default='download.jpg', upload_to='posts_pics')
     state = models.CharField(default="",max_length=15)
     nationality = models.CharField(default="",max_length=15)
     address = models.CharField(default="",max_length=50)
@@ -31,7 +31,7 @@ class  StaffProfile(models.Model):
 
     # staff details
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    image = models.ImageField(default='media/download.jpg', upload_to="profile_pix")
+    image = models.ImageField(default='download.jpg', upload_to="posts_pics")
     state = models.CharField(default="",max_length=15)
     nationality = models.CharField(default="",max_length=15)
     address = models.CharField(default="",max_length=50)
