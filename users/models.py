@@ -39,7 +39,7 @@ class  StaffProfile(models.Model):
     category = models.CharField(default="",max_length=30)
     post = models.CharField(default="",max_length=10)
     department = models.CharField(default="",max_length=30)
-    phone = models.CharField(default="",max_length=14)
+    phone = models.CharField(default="",max_length=255)
     Payment_status = models.CharField(default="",max_length=50)
     date_joined = models.CharField(default="",max_length=30)
 
