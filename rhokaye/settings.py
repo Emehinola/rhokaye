@@ -32,7 +32,6 @@ ALLOWED_HOSTS = ['rhokaye.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
-    'vacancy',
     'users',
     'posts',
     'crispy_forms',

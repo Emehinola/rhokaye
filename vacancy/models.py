@@ -7,16 +7,16 @@ class Vacancy(models.Model):
     role = models.CharField(max_length=200)
     salary = models.CharField(max_length=50)
     location = models.CharField(max_length=200)
-    requirement = models.CharField(max_length=300)
-    description = models.TextField()
-    created = models.DateField(auto_now=True)
+    requirements = models.CharField(max_length=300)
+    job_description = models.TextField()
+    created_at = models.DateField(auto_now=True)
 
     def __str__(self):
         return self.job_title
     
     class Meta:
         verbose_name_plural = 'Vacancy'
-        ordering = ['-created']
+        ordering = ['-created_at']
 
 class Applications(models.Model):
 
@@ -26,7 +26,7 @@ class Applications(models.Model):
     post = models.CharField(max_length=100)
     qualifications = models.CharField(max_length=50)
     email = models.EmailField()
-    phone = models.CharField(max_length=30)
+    phone = models.CharField(max_length=14)
     years_of_experience = models.IntegerField()
     location = models.CharField(max_length=100)
     created_at = models.DateField(auto_now=True)
