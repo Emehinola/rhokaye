@@ -152,8 +152,3 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ["EMAIL_HOST_USER"]
 EMAIL_HOST_PASSWORD = os.environ["EMAIL_HOST_PASSWORD"]
-
-#DEFAULT_FILE_STORAGE = "github_storages.backend.BackendStorages"
-#GITHUB_HANDLE = "Emehinola"
-#ACCESS_TOKEN = "3225a699e361bf6825b0932df8f06a5beacab062"
-#GITHUB_REPO_NAME = "Rhokaye-files"
